@@ -1,27 +1,28 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="Register.css">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="Login.css">
 </head>
 <body>
-    <div id="root">
-        <header>
-            <!-- Header component will be rendered here -->
-            <Header />
-        </header>
-        <main>
-            <!-- RegisterForm component will be rendered here -->
-            <RegisterForm />
-        </main>
-        <footer>
-            <!-- Footer component will be rendered here -->
-            <Footer />
-        </footer>
-    </div>
+	<header>
+		<h1>Welcome </h1>
+	</header>
+	<main>
+		<form>
+			<label for="email">Email:</label>
+			<input type="email" id="email" placeholder="Enter your email"><br><br>
+            <label for="Name">Name:</label>
+			<input type="name" id="name" placeholder="Enter your name"><br><br>
+			<label for="password">New Password:</label>
+			<input type="password" id="password" placeholder="Create your password"><br><br>
+            <label for="password">Confirm Password:</label>
+			<input type="password" id="password" placeholder="Confirm your password"><br><br>
+			<input type="submit" value="Login">
+		</form>
+	</main>
+	<footer>
+		<p>Already have an account? <a href="#"><button>Login</button> </a></p>
+	</footer>
 </body>
 </html>

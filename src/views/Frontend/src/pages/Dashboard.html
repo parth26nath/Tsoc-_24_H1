@@ -1,28 +1,42 @@
-// src/pages/Dashboard.js
-import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ContentList from '../components/ContentList';
-import './Dashboard.css';
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navcontainer">
+            <div class="logo">Logo</div>
+            <ul>
+                <li><a href="#" class="btn btn-secondary">Home</a></li>
+            </ul>
+        </nav>
+    </header>
 
-const Dashboard = () => {
-    const [contents, setContents] = useState([]);
+    <!-- Sidebar Section -->
+    <aside>
+        <ul>
+            <li><a href="#" class="btn btn-secondary">Dashboard</a></li>
+            <li><a href="#" class="btn btn-secondary">Profile</a></li>
+        </ul>
+    </aside>
 
-    // Fetch content from backend
-    // useEffect(() => {
-    //     fetchContents().then(setContents);
-    // }, []);
+    <!-- Main Content Area -->
+    <main>
+        <!-- Content will go here -->
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is the main content area of the dashboard.</p>
+    </main>
 
-    return (
-        <div>
-            <Header />
-            <main>
-                <h1>Dashboard</h1>
-                <ContentList contents={contents} />
-            </main>
-            <Footer />
-        </div>
-    );
-};
+    <!-- Footer Section -->
+    <footer>
+    </footer>
 
-export default Dashboard;
+    <script src="Dashboard.js"></script>
+</body>
+</html>

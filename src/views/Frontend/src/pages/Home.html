@@ -1,30 +1,42 @@
 <!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="Home.css">
 </head>
 <body>
-    <div id="root">
-        <header>
-            <!-- Header component will be rendered here -->
-            <Header />
-        </header>
-        <main>
-            <h1>Welcome to the Content Creation Page</h1>
-            <p>Create and manage your digital content with ease.</p>
-            <div>
-                <button>Get Started</button>
-            </div>
-        </main>
-        <footer>
-            <!-- Footer component will be rendered here -->
-            <Footer />
-        </footer>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="centered-content">HomePage</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav class="navcontainer">
+        <div class="menuicn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="auth-links">
+            <!-- authentication links will go here -->
+        </div>
+    </nav>
+
+    <!-- Box with login and register options -->
+    <div class="login-register-box">
+        <h2 class="centered-content">Already a user??</h2>
+        <h2 class="centered-content">Get Started</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button id="Login" class="btn">Login</button>
+            <button id="Register" class="btn">Register</button>
+        </form>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

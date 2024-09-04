@@ -10,9 +10,19 @@
 </head>
 <body>
     <div id="root">
+        <!-- Header Section -->
         <header>
-            <!-- Header component will be rendered here -->
+            <nav class="navcontainer">
+                <div class="logo">Logo</div>
+                <ul>
+                    <li><a href="#" class="btn btn-secondary">Home</a></li>
+                    <li><a href="#" class="btn btn-secondary">Dashboard</a></li>
+                    <li><a href="#" class="btn btn-secondary">Profile</a></li>
+                </ul>
+            </nav>
         </header>
+
+        <!-- Main Content Area -->
         <main>
             <!-- Step 1: ContentUploadForm -->
             {step === 1 && 
@@ -63,9 +73,20 @@
                 <p>Content and Tokens created successfully!</p>
             }
         </main>
+
+        <!-- Sidebar Section -->
+        <aside>
+            <ul>
+                <li><a href="#" class="btn btn-secondary">Dashboard</a></li>
+                <li><a href="#" class="btn btn-secondary">Profile</a></li>
+            </ul>
+        </aside>
+
+        <!-- Footer Section -->
         <footer>
-            <!-- Footer component will be rendered here -->
         </footer>
     </div>
+
+    <script src="ContentCreation.js"></script>
 </body>
 </html>
