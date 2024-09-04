@@ -1,0 +1,70 @@
+/* src/pages/Dashboard.css */
+
+/* Global Styles */
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Header Styles */
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Footer Styles */
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+  }
+  
+  /* Content List Styles */
+  
+  .content-list {
+    margin-top: 20px;
+  }
+  
+  .content-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .content-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .content-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .content-list a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  .content-list a:hover {
+    color: #23527c;
+  }
