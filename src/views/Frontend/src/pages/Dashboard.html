@@ -1,42 +1,77 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0">
-    <title>User Dashboard</title>
-    <link rel="stylesheet" href="Dashboard.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <nav class="navcontainer">
-            <div class="logo">Logo</div>
-            <ul>
-                <li><a href="#" class="btn btn-secondary">Home</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Dashboard HTML Structure -->
 
-    <!-- Sidebar Section -->
-    <aside>
-        <ul>
-            <li><a href="#" class="btn btn-secondary">Dashboard</a></li>
-            <li><a href="#" class="btn btn-secondary">Profile</a></li>
-        </ul>
-    </aside>
+<!-- Header with Navigation Links -->
+  <head>
+    <link rel="stylesheet" type="text/css" href="Dashboard.css">
+  </head>
+  <!-- Main Content Area -->
+  <main>
+    <!-- Content Creation Section -->
+    <section id="Dashboard">
+        <div style="text-align: center;">
+            <h1>Dashboard</h1>
+          </div>
+      <form id="content-creation-form">
+        <!-- Multi-step Form -->
+        <div id="content-upload">
+          <h3>Content Upload</h3>
+          <label for="content-title">Content Title:</label>
+          <input type="text" id="content-title" name="content-title"><br><br>
+          <label for="content-description">Content Description:</label>
+          <textarea id="content-description" name="content-description"></textarea><br><br>
+          <label for="file-upload">File Upload:</label>
+          <input type="file" id="file-upload" name="file-upload" accept=".txt, .mp4, .jpg, .png"><br><br>
+          <button type="button" id="submit-content-upload">Submit</button>
+        </div>
+  
+        <div id="token-parameters">
+            <h3>Token Parameters</h3>
+            <label for="nft-name">NFT Name:</label>
+            <input type="text" id="nft-name" name="nft-name"><br><br>
+            <label for="nft-symbol">NFT Symbol:</label>
+            <input type="text" id="nft-symbol" name="nft-symbol"><br><br>
+            <label for="total-supply">Total Supply of DRM Tokens:</label>
+            <input type="number" id="total-supply" name="total-supply"><br><br>
+            <label for="additional-features">Additional Features:</label>
+            <textarea id="additional-features" name="additional-features"></textarea><br><br>
+            <div class="button-container">
+              <button type="button" id="submit-token-parameters">Submit</button>
+              <button type="button" id="confirm-content-creation">Confirm</button>
+            </div>
+            <div id="confirmation"></div>
+            <p id="content-details-summary"></p>
+            <p id="token-parameters-summary"></p>
+          </div>
+      </form>
+    </section>
 
-    <!-- Main Content Area -->
-    <main>
-        <!-- Content will go here -->
-        <h1>Welcome to the Dashboard</h1>
-        <p>This is the main content area of the dashboard.</p>
-    </main>
+  </main>
+  <!-- Content and Token Management Section -->
+<section id="content-management">
+    <div style="text-align: center;">
+        <h1>Content and Token Management</h1>
+      </div>
+    <div id="content-list">
+      <!-- List of created content will be displayed here -->
+    </div>
 
-    <!-- Footer Section -->
-    <footer>
-    </footer>
+    <div id="content-detail-view">
+      <!-- Detailed view of selected content will be displayed here -->
+    </div>
 
-    <script src="Dashboard.js"></script>
-</body>
-</html>
+    <div id="management-options" style="text-align: center;">
+        <button id="distribute-drm-tokens">Distribute DRM Tokens</button>
+        <button id="view-transactions">View Transactions</button>
+      </div>
+  </section>
+  
+  <!-- Sidebar with Navigation Options -->
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="#content-creation">Content Creation</a></li>
+        <li><a href="#content-management">Content and Token Management</a></li>
+      </ul>
+    </nav>
+  </aside>
+  

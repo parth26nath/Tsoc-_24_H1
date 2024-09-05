@@ -1,94 +1,100 @@
-/* Add some basic styling to make it look nicer */
+.box {
+  flex: 0 0 30%; 
+  margin: 20px;
+  padding: 20px;
+  background-color: hsl(0, 85%, 3%);
+  border: 1px solid #110101;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box.boxed {
+  text-align: center;
+  border: 1px solid hsl(0, 100%, 1%);
+  padding: 10px;
+  border-radius: 5px;
+}
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #879fb5; 
 }
-
-.navcontainer {
-  background-color: #333;
-  color: #fff;
+.boxed {
+  text-align: center;
+  border: 1px solid hsl(0, 100%, 6%);
+  padding: 10px;
+  border-radius: 5px;
+}
+header {
+  background-color: #ccc;
+  color: #ccc;
   padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.navcontainer ul {
+header nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
 }
 
-.navcontainer li {
+header nav li {
   padding: 1em;
   border-bottom: none;
 }
 
-.navcontainer li a {
-  color: #fff;
+header nav li a {
+  color: #4CAF50;
   text-decoration: none;
 }
 
-.navcontainer li a:hover {
-  background-color: #444;
-}
-
-aside {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5em;
-  width: 100px;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  height: calc(100vh - 120px);
-}
-
-aside ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-aside li {
-  padding: 0.5em;
-  border-bottom: 1px solid #444;
-}
-
-aside li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-aside li a:hover {
+header nav li a:hover {
   background-color: #444;
 }
 
 main {
-  margin-left: 100px;
   padding: 1em;
-  margin-top: 60px;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
+#content-creation {
+  background-color: hsl(122, 87%, 6%);
   padding: 1em;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  border: 1px solid #222;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#content-creation h2 {
+  margin-top: 0;
+}
+
+#content-creation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+#content-creation-form div {
+  margin-bottom: 1em;
+}
+
+#content-creation-form label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#content-creation-form input, #content-creation-form textarea {
+  padding: 0.5em;
+  border: 1px solid hsl(122, 87%, 6%);
+  border-radius: 0.5em;
   width: 100%;
-  text-align: center;
 }
 
-.btn {
+#content-creation-form button[type="button"] {
   background-color: #4CAF50;
   color: #fff;
   border: none;
@@ -97,15 +103,66 @@ footer {
   cursor: pointer;
 }
 
-.btn:hover {
+#content-creation-form button[type="button"]:hover {
   background-color: #3e8e41;
 }
 
-.btn-secondary {
-  background-color: #666;
-  color: #fff;
+#content-management {
+  background-color: #879fb5;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn-secondary:hover {
-  background-color: #555;
+#content-management h2 {
+  margin-top: 0;
+}
+
+#content-list, #content-detail-view, #management-options {
+  margin-bottom: 1em;
+}
+
+#management-options button {
+  background-color: #0d9149;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+#management-options button:hover {
+  background-color: #4CAF50;
+}
+
+aside {
+  background-color: hsl(240, 9%, 45%);
+  color: #3e8e41;
+  padding: 0.5em;
+  width: 100px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100vh - 120px);
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside nav li {
+  padding: 0.5em;
+  border-bottom: 1px solid #444;
+}
+
+aside nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+aside nav li a:hover {
+  background-color: #444;
 }
