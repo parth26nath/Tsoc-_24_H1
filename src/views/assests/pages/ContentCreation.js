@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import './ContentCreation.css';
 import ContentUploadForm from '../components/ContentUploadForm';
 import TokenParametersForm from '../components/TokenParametersForm';
 import Confirmation from '../components/Confirmation';

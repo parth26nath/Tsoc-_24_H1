@@ -1,8 +1,9 @@
 // src/pages/ContentManagement.js
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ContentDetail from '../components/ContentDetail';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import ContentDetail from '../../components/ContentDetail';
+import './ContentManagement.css';
 
 const ContentManagement = ({ contents }) => {
     return (
