@@ -1,63 +1,98 @@
-/* src/pages/Home.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: aqua; /* Light background for the entire page */
+}
 
-/* Global Styles */
+.header {
+  background-color: hsl(0, 0%, 0%); /* Header color */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-.home {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  body {
-    background-color:  #40E0D0; 
-  }
+.navcontainer {
+  background-color: teal; /* Navbar color */
+  padding: 10px;
+  text-align: center;
+}
 
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  p {
-    margin-bottom: 40px;
-  }
-  
-  /* Header Styles */
-  
-  .header {
-    background-color: #646464;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Footer Styles */
-  
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    clear: both;
-  }
-  
-  /* Button Styles */
-  
-  button {
-    background-color: #337ab7;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #23527c;
-  }
+.nav-links a {
+  background-color: teal;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #45a049; /* Hover effect for navbar links */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.login-register-box {
+  background-color: #fff;
+  padding: 30px;
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], 
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #4CAF50; /* Button color */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Space between buttons */
+}
+
+.btn:hover {
+  background-color: #45a049; /* Hover effect for buttons */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+}

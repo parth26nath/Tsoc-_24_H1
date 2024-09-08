@@ -1,92 +1,65 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Creation</title>
-    <link rel="stylesheet" href="ContentCreation.css">
+    <title>Content and Token Management</title>
+    <link rel="stylesheet" href="COntentManagement.css">
 </head>
 <body>
-    <div id="root">
-        <!-- Header Section -->
-        <header>
-            <nav class="navcontainer">
-                <div class="logo">Logo</div>
-                <ul>
-                    <li><a href="#" class="btn btn-secondary">Home</a></li>
-                    <li><a href="#" class="btn btn-secondary">Dashboard</a></li>
-                    <li><a href="#" class="btn btn-secondary">Profile</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <header class="header">
+            <h1>Content and Token Management</h1>
         </header>
+        
+        <nav class="navcontainer">
+            <ul class="nav-links">
+                <li><a href="#">Content List</a></li>
+                <li><a href="#">Content Detail</a></li>
+                <li><a href="#">Management Options</a></li>
+            </ul>
+        </nav>
 
-        <!-- Main Content Area -->
         <main>
-            <!-- Step 1: ContentUploadForm -->
-            {step === 1 && 
-                <div>
-                    <h2>Upload Content</h2>
-                    <form>
-                        <label for="title">Title:</label>
-                        <input type="text" id="title" name="title"><br><br>
-                        <label for="description">Description:</label>
-                        <textarea id="description" name="description"></textarea><br><br>
-                        <label for="file">File:</label>
-                        <input type="file" id="file" name="file"><br><br>
-                        <button type="submit" onclick="nextStep()">Next</button>
-                    </form>
+            <section class="step">
+                <h2>Content List</h2>
+                <ul>
+                    <li class="content-item" onclick="showDetail('Content 1')">Content 1</li>
+                    <li class="content-item" onclick="showDetail('Content 2')">Content 2</li>
+                    <li class="content-item" onclick="showDetail('Content 3')">Content 3</li>
+                </ul>
+            </section>
+
+            <section class="step">
+                <h2>Content Detail View</h2>
+                <div id="detail-view">
+                    <p>Select a content item to see the details.</p>
                 </div>
-            }
-            <!-- Step 2: TokenParametersForm -->
-            {step === 2 && 
-                <div>
-                    <h2>Set Token Parameters</h2>
-                    <form>
-                        <label for="nftName">NFT Name:</label>
-                        <input type="text" id="nftName" name="nftName"><br><br>
-                        <label for="nftSymbol">NFT Symbol:</label>
-                        <input type="text" id="nftSymbol" name="nftSymbol"><br><br>
-                        <label for="totalSupply">Total Supply:</label>
-                        <input type="number" id="totalSupply" name="totalSupply"><br><br>
-                        <button type="submit" onclick="nextStep()">Next</button>
-                        <button onclick="previousStep()">Back</button>
-                    </form>
-                </div>
-            }
-            <!-- Step 3: Confirmation -->
-            {step === 3 && 
-                <div>
-                    <h2>Confirm Details</h2>
-                    <p>Content Title: <span id="content-title">{contentDetails.title}</span></p>
-                    <p>Content Description: <span id="content-description">{contentDetails.description}</span></p>
-                    <p>NFT Name: <span id="nft-name">{tokenDetails.nftName}</span></p>
-                    <p>NFT Symbol: <span id="nft-symbol">{tokenDetails.nftSymbol}</span></p>
-                    <p>Total Supply: <span id="total-supply">{tokenDetails.totalSupply}</span></p>
-                    <button onclick="onConfirm()">Confirm</button>
-                    <button onclick="previousStep()">Back</button>
-                </div>
-            }
-            <!-- Step 4: Success Message -->
-            {step === 4 && 
-                <p>Content and Tokens created successfully!</p>
-            }
+            </section>
+
+            <section class="step">
+                <h2>Management Options</h2>
+                <button class="btn" onclick="distributeTokens()">Distribute DRM Tokens</button>
+                <button class="btn" onclick="viewTransactions()">View Transactions</button>
+            </section>
         </main>
 
-        <!-- Sidebar Section -->
-        <aside>
-            <ul>
-                <li><a href="#" class="btn btn-secondary">Dashboard</a></li>
-                <li><a href="#" class="btn btn-secondary">Profile</a></li>
-            </ul>
-        </aside>
-
-        <!-- Footer Section -->
         <footer>
         </footer>
     </div>
 
-    <script src="ContentCreation.js"></script>
+    <script>
+        function showDetail(content) {
+            document.getElementById('detail-view').innerHTML = `<p>Details for ${content}</p>`;
+        }
+
+        function distributeTokens() {
+            alert('Distributing DRM Tokens...');
+        }
+
+        function viewTransactions() {
+            alert('Viewing Transactions...');
+        }
+    </script>
 </body>
 </html>
