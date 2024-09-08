@@ -1,28 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Login Page</title>
-	<link rel="stylesheet" href="Login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | MyApp</title>
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
-	<header>
-		<h1>Welcome </h1>
-	</header>
-	<main>
-		<form>
-			<label for="email">Email:</label>
-			<input type="email" id="email" placeholder="Enter your email"><br><br>
-            <label for="Name">Name:</label>
-			<input type="name" id="name" placeholder="Enter your name"><br><br>
-			<label for="password">New Password:</label>
-			<input type="password" id="password" placeholder="Create your password"><br><br>
-            <label for="password">Confirm Password:</label>
-			<input type="password" id="password" placeholder="Confirm your password"><br><br>
-			<input type="submit" value="Login">
-		</form>
-	</main>
-	<footer>
-		<p>Already have an account? <a href="#"><button>Login</button> </a></p>
-	</footer>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Welcome to MyApp</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav class="navcontainer">
+        <div class="nav-links">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <main>
+        <div class="register-box">
+            <h2>Create an Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">New Password:</label>
+                    <input type="password" id="password" placeholder="Create your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

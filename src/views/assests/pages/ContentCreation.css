@@ -1,110 +1,113 @@
-/* src/pages/ContentCreation.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light background for the entire page */
+}
 
-/* Global Styles */
+.header {
+  background-color: teal; /* Header color */
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  /* Content Creation Styles */
-  
-  .content-creation {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .content-creation header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-bottom: 1px solid #333;
-  }
-  
-  .content-creation main {
-    padding: 20px;
-  }
-  
-  .content-creation footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-top: 1px solid #333;
-  }
-  
-  /* Form Styles */
-  
-  form {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    height: 40px;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #444;
-  }
-  
-  /* Back Button Styles */
-  
-  .back-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .back-button:hover {
-    background-color: #444;
-  }
-  
-  /* Success Message Styles */
-  
-  .success-message {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #dff0d8;
-    border: 1px solid #8bc34a;
-    border-radius: 5px;
-    color: #3e8e41;
-  }
+.navcontainer {
+  background-color: black; /* Navbar color */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  background-color: teal;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #45a049; /* Hover effect for navbar links */
+}
+
+main {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.step {
+  background-color: #fff;
+  padding: 30px;
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.btn {
+  background-color: #4CAF50; /* Button color */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Space between buttons */
+}
+
+.btn:hover {
+  background-color: #45a049; /* Hover effect for buttons */
+}
+
+footer {
+  background-color: aqua;
+  color: aqua;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
